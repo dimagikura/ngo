@@ -25,9 +25,60 @@
 }
 
 /* Global Styles */
+/* Update your existing html block to include Firefox scrollbar support */
 html {
     scroll-behavior: smooth;
+    /* Firefox scrollbar styling */
+    scrollbar-width: auto;
+    scrollbar-color: var(--yellow) var(--bg-color);
 }
+
+/* ==========================================
+   CUSTOM SCROLLBAR (Neo-Brutalist Theme)
+   ========================================== */
+
+/* WebKit (Chrome, Safari, Edge) Support */
+::-webkit-scrollbar {
+    width: 14px; /* Narrow and elegant, but wide enough for chunky borders */
+    height: 14px; /* Applies if horizontal scrolling ever occurs */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--black); /* Subtly separates the track from the page grid */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    /* Standard thick border around the thumb */
+    border: 2px solid var(--black);
+    
+    /* Using asymmetrical borders to perfectly mimic the black offset shadow of your cards */
+    border-bottom: 4px solid var(--black);
+    border-right: 4px solid var(--black);
+    
+    border-radius: 6px; /* Slightly rounded corners matching the UI */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #eab420; /* Slightly darker, prominent yellow on hover */
+    cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--green); /* Playful interaction: swaps to brand green when dragged */
+    /* Shrinking the shadow borders slightly to simulate a "pressed" button effect */
+    border-bottom: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+}
+
+/* Corner piece where vertical and horizontal scrollbars meet */
+::-webkit-scrollbar-corner {
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--black);
+    border-top: 2px solid var(--black);
+}
+
 
 body {
     background-color: var(--bg-color);
