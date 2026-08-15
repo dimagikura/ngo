@@ -27,8 +27,6 @@
 /* Global Styles */
 /* Update your existing html block to include Firefox scrollbar support */
 html {
-    scroll-behavior: smooth;
-    /* Firefox scrollbar styling */
     scrollbar-width: auto;
     scrollbar-color: var(--yellow) var(--bg-color);
 }
