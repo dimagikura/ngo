@@ -1,0 +1,328 @@
+/* ==========================================
+   DIMAGI KURA — Reusable Components
+   ========================================== */
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: var(--transition-standard);
+    border-radius: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-near-black);
+    color: var(--color-white);
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Navigation */
+.site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.logo-link img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-near-black);
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-standard);
+    z-index: 100;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    color: var(--color-near-black);
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-off-white);
+    color: var(--color-black);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-black);
+    transition: var(--transition-standard);
+}
+
+/* Cards with Required Drop Shadows */
+.card-shadow {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-standard);
+}
+
+.card-shadow:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-near-black);
+    color: var(--color-white);
+    padding: 5rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer-brand img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    color: var(--color-medium-gray);
+    font-size: 0.95rem;
+}
+
+.footer-col h4 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-col ul li a {
+    color: var(--color-medium-gray);
+    font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-white);
+}
+
+.footer-bottom {
+    border-top: 1px solid #222222;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-medium-gray);
+    font-size: 0.9rem;
+}
+
+/* #MentalHealthMatters Banner */
+.mental-health-banner {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1.25rem 0.5rem; /* Reduced horizontal padding from 1rem to 0.5rem */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.mental-health-banner h2 {
+    font-size: clamp(1.35rem, 4.3vw, 5rem); /* Lowered minimum range so it fits comfortably at 768px */
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   Infinite Continuous Logo Marquee Ticker (Fixed)
+   ========================================== */
+/* ==========================================
+   Foolproof Marquee Ticker
+   ========================================== */
+.logo-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 1.5rem 0;
+}
+
+.logo-marquee-track {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    width: max-content;
+    /* Will be animated via JS for absolute reliability */
+}
+
+
+
+/* Pause scroll when a visitor hovers over the logos */
+.logo-marquee-wrapper:hover .logo-marquee-track {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    opacity: 0.8;
+    flex-shrink: 0;
+    transition: opacity 0.25s ease;
+}
+
+.logo-item:hover {
+    opacity: 1;
+}
+
+/* Hardware-accelerated infinite horizontal loop keyframes */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Respect user reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+        animation: none;
+    }
+}
+
+/* ==========================================
+   BOD Leadership Hierarchical Layout
+   ========================================== */
+.bods-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bods-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.general-sec-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+}
+
+.general-sec-card {
+    width: 100%;
+    max-width: 420px;
+    border: 0.1px solid var(--color-black);
+}
+
+@media (max-width: 900px) {
+    .bods-row {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
